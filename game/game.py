@@ -74,9 +74,8 @@ class Juego:
         self.contador_tiempo = 0
         self.tiempo_entre_enemigos = 111
         
-        # Inicializar enemigos
         for i in range(100):
-            tipo = 0 if i < 50 else 1  # Primeros 50 coches rojos, siguientes 50 monedas
+            tipo = 0 if i < 50 else 1
             x = random.randint(0, ANCHO - ENEMIGO_ANCHO)
             self.enemigos.append(Enemigo(x, ALTO * 0.1, tipo))
 
@@ -88,21 +87,19 @@ class Juego:
         self.contador_tiempo = 0
         
         for i in range(100):
-            tipo = 0 if i < 50 else 1  # Primeros 50 coches rojos, siguientes 50 monedas
+            tipo = 0 if i < 50 else 1  
             x = random.randint(0, ANCHO - ENEMIGO_ANCHO)
             self.enemigos.append(Enemigo(x, ALTO * 0.1, tipo))
 
     def mover_enemigos(self):
         self.contador_tiempo += 1
 
-        # Activar enemigo si es necesario
         if self.enemigo_activo is None and self.contador_tiempo >= 60:
             enemigos_esperando = [i for i, enemigo in enumerate(self.enemigos) if enemigo.estado == 0]
             if enemigos_esperando:
                 self.enemigo_activo = random.choice(enemigos_esperando)
                 self.contador_tiempo = 0
 
-        # Mover enemigos
         for i, enemigo in enumerate(self.enemigos):
             if enemigo.estado == 0 and i == self.enemigo_activo:
                 enemigo.activar()
@@ -114,13 +111,13 @@ class Juego:
     def verificar_colisiones(self):
         for enemigo in self.enemigos:
             if enemigo.colisiona_con(self.jugador.x, self.jugador.y, self.jugador.radio):
-                if enemigo.tipo == 1:  # Moneda, sumar puntos
+                if enemigo.tipo == 1:  
                     self.puntos += 1
                     if not hasattr(self, 'coin_sound'):
                         self.coin_sound = pygame.mixer.Sound('game/assets/sounds/cash.mp3')
                     self.coin_sound.play()
-                    enemigo.estado = 2  # Eliminar moneda
-                else:  # Coche rojo, game over
+                    enemigo.estado = 2 
+                else:   
                     return False
         return True
 
@@ -130,7 +127,6 @@ class Juego:
     def dibujar(self, pantalla):
         dibujar_escena_paisaje(pantalla)
         
-        # Dibujar enemigos
         for enemigo in self.enemigos:
             enemigo.dibujar(pantalla)
             
@@ -150,7 +146,7 @@ class Juego:
         self.dibujar(pantalla)
         return "continue"
 
-# Instancia global del juego para compatibilidad con código existente
+
 juego = Juego()
 
 def reset_game():

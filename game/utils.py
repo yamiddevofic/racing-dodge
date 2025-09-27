@@ -9,4 +9,4 @@ def draw_text(screen, text, font_size, color, x, y, center=True):
     else:
         rect.topleft = (x, y)
     screen.blit(surface, rect)
-    return rect  # devuelve el rect para poder detectar clics
+    return rect

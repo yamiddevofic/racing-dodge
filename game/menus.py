@@ -6,15 +6,10 @@ def main_menu(screen):
     screen.fill((0, 0, 0))
     title_rect = draw_text(screen, "RACING DODGE", 80, BLANCO, 500, 150)
 
-    # Draw play button with default color
     play_rect = draw_text(screen, "Jugar", 50, AZUL, 500, 300)
-    # Check hover and redraw if necessary
     if play_rect.collidepoint(pygame.mouse.get_pos()):
         play_rect = draw_text(screen, "Jugar", 50, ROJO, 500, 300)
-
-    # Draw quit button with default color
     quit_rect = draw_text(screen, "Salir", 50, AZUL, 500, 400)
-    # Check hover and redraw if necessary
     if quit_rect.collidepoint(pygame.mouse.get_pos()):
         quit_rect = draw_text(screen, "Salir", 50, ROJO, 500, 400)
 
@@ -32,15 +27,10 @@ def game_over_menu(screen, score, previous_high_score):
     else:
         draw_text(screen, f"Puntaje maximo: {previous_high_score}", 40, BLANCO, 500, 350)
 
-    # Draw retry button with default color
     retry_rect = draw_text(screen, "Reintentar", 50, AZUL, 500, 450)
-    # Check hover and redraw if necessary
     if retry_rect.collidepoint(pygame.mouse.get_pos()):
         retry_rect = draw_text(screen, "Reintentar", 50, ROJO, 500, 450)
-
-    # Draw quit button with default color
     quit_rect = draw_text(screen, "Salir", 50, AZUL, 500, 500)
-    # Check hover and redraw if necessary
     if quit_rect.collidepoint(pygame.mouse.get_pos()):
         quit_rect = draw_text(screen, "Salir", 50, ROJO, 500, 500)
 
@@ -56,15 +46,10 @@ def win_menu(screen, score, previous_high_score):
     else:
         draw_text(screen, f"Puntaje maximo: {previous_high_score}", 40, BLANCO, 500, 350)
 
-    # Draw retry button with default color
     retry_rect = draw_text(screen, "Reintentar", 50, AZUL, 500, 450)
-    # Check hover and redraw if necessary
     if retry_rect.collidepoint(pygame.mouse.get_pos()):
         retry_rect = draw_text(screen, "Reintentar", 50, ROJO, 500, 450)
-
-    # Draw quit button with default color
     quit_rect = draw_text(screen, "Salir", 50, AZUL, 500, 500)
-    # Check hover and redraw if necessary
     if quit_rect.collidepoint(pygame.mouse.get_pos()):
         quit_rect = draw_text(screen, "Salir", 50, ROJO, 500, 500)
 
@@ -75,21 +60,13 @@ def pause_menu(screen):
     screen.fill((0, 0, 0))
     draw_text(screen, "PAUSA", 80, BLANCO, 500, 150)
 
-    # Draw continue button with default color
     continue_rect = draw_text(screen, "Continuar", 50, AZUL, 500, 250)
-    # Check hover and redraw if necessary
     if continue_rect.collidepoint(pygame.mouse.get_pos()):
         continue_rect = draw_text(screen, "Continuar", 50, ROJO, 500, 250)
-
-    # Draw restart button with default color
     restart_rect = draw_text(screen, "Reiniciar", 50, AZUL, 500, 350)
-    # Check hover and redraw if necessary
     if restart_rect.collidepoint(pygame.mouse.get_pos()):
         restart_rect = draw_text(screen, "Reiniciar", 50, ROJO, 500, 350)
-
-    # Draw quit button with default color
     quit_rect = draw_text(screen, "Salir", 50, AZUL, 500, 450)
-    # Check hover and redraw if necessary
     if quit_rect.collidepoint(pygame.mouse.get_pos()):
         quit_rect = draw_text(screen, "Salir", 50, ROJO, 500, 450)
 

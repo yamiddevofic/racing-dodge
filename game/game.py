@@ -111,13 +111,16 @@ class Juego:
     def verificar_colisiones(self):
         for enemigo in self.enemigos:
             if enemigo.colisiona_con(self.jugador.x, self.jugador.y, self.jugador.radio):
-                if enemigo.tipo == 1:  
+                if enemigo.tipo == 1:
                     self.puntos += 1
                     if not hasattr(self, 'coin_sound'):
                         self.coin_sound = pygame.mixer.Sound('game/assets/sounds/cash.mp3')
                     self.coin_sound.play()
-                    enemigo.estado = 2 
-                else:   
+                    enemigo.estado = 2
+                else:
+                    if not hasattr(self, 'crash_sound'):
+                        self.crash_sound = pygame.mixer.Sound('game/assets/sounds/not-a-big-crash.mp3')
+                    self.crash_sound.play()
                     return False
         return True
 

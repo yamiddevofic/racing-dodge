@@ -88,16 +88,16 @@ pip install pygame
 ### Paso 4: Verificar la Instalación
 ```bash
 # Verificar que Python esté instalado
-python --version
+python3 --version
 
 # Verificar que PyGame se instaló correctamente
-python -c "import pygame; print('PyGame instalado correctamente')"
+python3 -c "import pygame; print('PyGame instalado correctamente')"
 ```
 
 ### Paso 5: Ejecutar el Juego
 ```bash
 # Desde la carpeta principal del proyecto
-python game/main.py
+python3 game/main.py
 ```
 
 ### Paso 6: Controles del Juego
@@ -122,7 +122,7 @@ pip install pygame
 
 **El juego no inicia**
 - Verifica que Python 3.12+ esté instalado
-- Ejecuta `python --version` para confirmar
+- Ejecuta `python3 --version` para confirmar
 
 ## Estructura del Proyecto
 

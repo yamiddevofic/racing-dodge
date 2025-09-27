@@ -1,0 +1,33 @@
+# Configuración global
+
+TITLE = "Racing Dodge"
+
+ANCHO = 1000
+ALTO = 800
+FPS = 60
+
+# Colores (RGB)
+
+NEGRO = (0, 0, 0)
+ROJO = (255, 0, 0)
+BLANCO = (255, 255, 255)
+VERDE = (0, 255, 0)
+AZUL = (0, 0, 255)
+GRIS = (128, 128, 128)
+AZUL_CLARO = (173, 216, 230)
+AZUL_OSCURO = (0, 0, 128)
+AMARILLO = (255, 255, 0)
+ROSA = (255, 0, 255)
+MORADO = (128, 0, 128)
+NARANJA = (255, 165, 0)
+
+# Jugador
+JUGADOR_RADIO = 50
+JUGADOR_VELOCIDAD = 8
+
+# Enemigo rectangulo
+ENEMIGO_RADIO = 100
+ENEMIGO_ANCHO = 100
+ENEMIGO_ALTO = 120
+ENEMIGO_VELOCIDAD = 6
+
